@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
-import RecipeList from "../pages/RecipeList";
-import NewRecipe from "../pages/NewRecipe";
+import InvoiceContainer from "../pages/InvoiceContainer";
+import NewInvoice from "../pages/NewInvoice";
+import InvoicePage from "../pages/InvoicePage";
+import Transactions from "../pages/Transactions";
+import "../styles/index.css";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [invoices, setInvoices] = useState([]);
 
   useEffect(() => {
     // auto-login
@@ -17,6 +21,30 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    fetch("/invoices")
+      .then((r) => r.json())
+      .then(setInvoices);
+  }, []);
+
+  function handleAddInvoice(addedInvoice) {
+    setInvoices((invoices) => [...invoices, addedInvoice]);
+  }
+
+  function handleUpdateInvoice(updatedInvoice) {
+    setInvoices((invoices) =>
+      invoices.map((invoice) => {
+        return invoice.id === updatedInvoice.id ? updatedInvoice : invoice;
+      })
+    );
+  }
+
+  function handleDeleteInvoice(deletedInvoice) {
+    setInvoices((invoices) =>
+      invoices.filter((invoice) => invoice.id !== deletedInvoice.id)
+    );
+  }
+
   if (!user) return <Login onLogin={setUser} />;
 
   return (
@@ -25,10 +53,20 @@ function App() {
       <main>
         <Switch>
           <Route path="/new">
-            <NewRecipe user={user} />
+            <NewInvoice onAddInvoice={handleAddInvoice} />
           </Route>
-          <Route path="/">
-            <RecipeList />
+          <Route path="/invoices">
+            <InvoiceContainer
+              invoices={invoices}
+              onUpdateInvoice={handleUpdateInvoice}
+              onDeleteInvoice={handleDeleteInvoice}
+            />
+          </Route>
+          <Route exact path="/invoice/:id">
+            <InvoicePage onDeleteInvoice={handleDeleteInvoice} />
+          </Route>
+          <Route exact path="/transactions">
+            <Transactions />
           </Route>
         </Switch>
       </main>

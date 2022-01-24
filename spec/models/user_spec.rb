@@ -6,8 +6,8 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
 
-  it "has many recipes" do
-    expect(User.new).to respond_to(:recipes)
+  it "has many invoices" do
+    expect(User.new).to respond_to(:invoices)
   end
 
   describe "validations" do

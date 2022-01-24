@@ -15,11 +15,11 @@ function NavBar({ user, setUser }) {
   return (
     <Wrapper>
       <Logo>
-        <Link to="/">Reciplease</Link>
+        <Link to="/invoices">Invoice Dashboard</Link>
       </Logo>
       <Nav>
         <Button as={Link} to="/new">
-          New Recipe
+          New Invoice
         </Button>
         <Button variant="outline" onClick={handleLogoutClick}>
           Logout
@@ -34,13 +34,16 @@ const Wrapper = styled.header`
   justify-content: center;
   align-items: center;
   padding: 8px;
+  @media print {
+    display: none;
+  }
 `;
 
 const Logo = styled.h1`
-  font-family: "Permanent Marker", cursive;
+  font-family: "Trattatello", fantasy;
   font-size: 3rem;
-  color: deeppink;
-  margin: 0;
+  color: blue;
+  margin-top: 2rem;
   line-height: 1;
 
   a {

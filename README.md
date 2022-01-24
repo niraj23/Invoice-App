@@ -58,16 +58,16 @@ Your `User` model should also:
 - incorporate the `has_secure_password` macro to enable password encryption with `bcrypt`
 - validate the user's username to ensure that it is **present** and **unique**
   (no two users can have the same username)
-- a user **has many** recipes
+- a user **has many** invoices
 
-Next, create a `Recipe` model with the following attributes:
+Next, create a `Invoice` model with the following attributes:
 
-- a recipe **belongs to** a user
+- a invoice **belongs to** a user
 - `title` that is a `string` type
 - `instructions` that is a `text` type
 - `minutes_to_complete` that is a `integer` type
 
-Add validations for the `Recipe` model:
+Add validations for the `Invoice` model:
 
 - `title` must be present
 - `instructions` must be present and at least 50 characters long
@@ -162,41 +162,41 @@ You should also be able to test this in the React application by logging in to
 check the `POST /login` route; and logging out with the logout button to test
 the `DELETE /logout` route.
 
-### Recipe List Feature
+### Invoice List Feature
 
-Users should only be able to view recipes on our site after logging in.
+Users should only be able to view invoices on our site after logging in.
 
-Handle recipe viewing by implementing a `GET /recipes` route. It should:
+Handle invoice viewing by implementing a `GET /invoices` route. It should:
 
-- Be handled in the `RecipesController` with a `index` action
+- Be handled in the `InvoicesController` with a `index` action
 - In the `index` action, if the user is logged in (if their `user_id` is in the session hash):
-  - Return a JSON response with of an array of all recipes with their title,
+  - Return a JSON response with of an array of all invoices with their title,
     instructions, and minutes to complete data along with a nested user object;
     and a HTTP status code of 201 (Created)
 - If the user is **not** logged in when they make the request:
   - Return a JSON response with an error message, and a status of 401 (Unauthorized)
 
-### Recipe Creation Feature
+### Invoice Creation Feature
 
-Now that users can log in, let's allow them to create new recipes!
+Now that users can log in, let's allow them to create new invoices!
 
-Handle recipe creation by implementing a `POST /recipes` route. It should:
+Handle invoice creation by implementing a `POST /invoices` route. It should:
 
-- Be handled in the `RecipesController` with a `create` action
+- Be handled in the `InvoicesController` with a `create` action
 - In the `create` action, if the user is logged in (if their `user_id` is in the session hash):
-  - Save a new recipe to the database if it is valid. The recipe should **belong
+  - Save a new invoice to the database if it is valid. The invoice should **belong
     to** the logged in user, and should have title, instructions, and minutes to
     complete data provided from the params hash
   - Return a JSON response with the title, instructions, and minutes to complete
     data along with a nested user object; and a HTTP status code of 201 (Created)
 - If the user is **not** logged in when they make the request:
   - Return a JSON response with an error message, and a status of 401 (Unauthorized)
-- If the recipe is **not valid**:
+- If the invoice is **not valid**:
   - Return a JSON response with the error messages, and a HTTP status code of
     422 (Unprocessable Entity)
 
-After finishing the `RecipeController` features, you're done! Make sure to check
+After finishing the `InvoiceController` features, you're done! Make sure to check
 your work. You should be able to run the full test suite now with `learn test`.
 
 You should also be able to test this in the React application by creating a new
-recipe with the recipe form, and viewing a list of recipes.
+invoice with the invoice form, and viewing a list of invoices.
