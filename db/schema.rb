@@ -12,8 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2022_01_20_014426) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "invoices", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "description"
     t.string "client_name"
     t.string "client_email"
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 2022_01_20_014426) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.string "item"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
