@@ -94,6 +94,12 @@ const InvoicePage = ({ onDeleteInvoice }) => {
                 </table>
               </td>
             </tr>
+            <tr className="heading">
+              <td>Description</td>
+            </tr>
+            <tr className="details">
+              <td>{invoice.description}</td>
+            </tr>
 
             <tr className="heading">
               <td>Payment Method</td>
@@ -114,27 +120,15 @@ const InvoicePage = ({ onDeleteInvoice }) => {
             </tr>
 
             <tr className="item">
-              <td>{invoice.description}</td>
+              <td>{invoice.item}</td>
 
-              <td>$300.00</td>
-            </tr>
-
-            <tr className="item">
-              <td>Hosting (3 months)</td>
-
-              <td>$75.00</td>
-            </tr>
-
-            <tr className="item last">
-              <td>Domain name (1 year)</td>
-
-              <td>$10.00</td>
+              <td>$ {invoice.price}</td>
             </tr>
 
             <tr className="total">
               <td></td>
 
-              <td>Total: $385.00</td>
+              <td>Total: $ {invoice.price}</td>
             </tr>
           </table>
         </div>

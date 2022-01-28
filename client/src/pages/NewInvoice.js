@@ -10,6 +10,9 @@ function NewInvoice({ onAddInvoice }) {
   const [clientName, setClientName] = useState("");
   const [clientEmail, setClientEmail] = useState("");
   const [logo, setLogo] = useState("");
+  const [item, setItem] = useState("");
+  const [price, setPrice] = useState("");
+
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -29,6 +32,8 @@ function NewInvoice({ onAddInvoice }) {
         due_date: dueDate,
         status,
         logo,
+        item,
+        price,
       }),
     }).then((r) => {
       setIsLoading(false);
@@ -94,12 +99,30 @@ function NewInvoice({ onAddInvoice }) {
             />
           </FormField>
           <FormField>
-            <Label htmlFor="status">Company Logo</Label>
+            <Label htmlFor="logo">Company Logo</Label>
             <Input
               type="url"
               id="logo"
               value={logo}
               onChange={(e) => setLogo(e.target.value)}
+            />
+          </FormField>
+          <FormField>
+            <Label htmlFor="item">Item</Label>
+            <Input
+              type="text"
+              id="item"
+              value={item}
+              onChange={(e) => setItem(e.target.value)}
+            />
+          </FormField>
+          <FormField>
+            <Label htmlFor="price">Price</Label>
+            <Input
+              type="number"
+              id="price"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
             />
           </FormField>
           <FormField>
