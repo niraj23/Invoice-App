@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2022_01_20_014426) do
     t.string "client_email"
     t.string "status"
     t.datetime "due_date"
+    t.string "logo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_invoices_on_user_id"

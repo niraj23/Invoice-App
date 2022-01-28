@@ -23,7 +23,7 @@ end
   private
 
   def invoice_params
-    params.permit(:id, :description, :client_name, :client_email, :status, :due_date)
+    params.permit(:id, :description, :client_name, :client_email, :status, :due_date, :logo)
   end
 
 end

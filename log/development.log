@@ -267,3 +267,1071 @@ Completed 204 No Content in 22ms (ActiveRecord: 7.7ms | Allocations: 2196)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2621538369271647105)[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:11:35 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:11:35 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 28ms (Views: 0.1ms | ActiveRecord: 5.4ms | Allocations: 5279)
+
+
+Completed 401 Unauthorized in 31ms (Views: 0.1ms | ActiveRecord: 19.2ms | Allocations: 7466)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:21:11 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:21:11 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/invoices"):
+  
+Started POST "/signup" for 127.0.0.1 at 2022-01-27 18:21:23 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/signup"):
+  
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:21:30 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:21:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/invoices"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:23:20 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:23:20 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InvoicesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 21ms (Views: 0.2ms | ActiveRecord: 11.7ms | Allocations: 4501)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 25ms (Views: 0.1ms | ActiveRecord: 7.1ms | Allocations: 5913)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:23:21 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:23:21 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1221)
+
+
+Completed 401 Unauthorized in 8ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1354)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:23:39 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:23:39 -0500
+Processing by InvoicesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 70ms (Views: 0.8ms | ActiveRecord: 41.8ms | Allocations: 5933)
+
+
+  [1m[36mInvoice Load (19.7ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 104ms (Views: 4.6ms | ActiveRecord: 43.4ms | Allocations: 11946)
+
+
+Started GET "/invoices/2" for 127.0.0.1 at 2022-01-27 18:23:46 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.2ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 1.0ms | ActiveRecord: 1.1ms | Allocations: 1191)
+
+
+Started DELETE "/invoices/2" for 127.0.0.1 at 2022-01-27 18:23:52 -0500
+Processing by InvoicesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.2ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:18:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/invoices_controller.rb:19:in `destroy'
+  [1m[36mInvoice Destroy (13.1ms)[0m  [1m[31mDELETE FROM "invoices" WHERE "invoices"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/invoices_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/invoices_controller.rb:19:in `destroy'
+Completed 204 No Content in 33ms (ActiveRecord: 25.0ms | Allocations: 2229)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:23:54 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 3ms (ActiveRecord: 0.3ms | Allocations: 494)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:23:56 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 401 Unauthorized in 301ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 669)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:24:00 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 286ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 618)
+
+
+Started GET "/invoices" for ::1 at 2022-01-27 18:24:12 -0500
+Processing by InvoicesController#index as */*
+Started GET "/me" for ::1 at 2022-01-27 18:24:12 -0500
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.4ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 9.9ms | ActiveRecord: 1.0ms | Allocations: 2159)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 2857)
+
+
+Started DELETE "/logout" for ::1 at 2022-01-27 18:24:21 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 8ms (ActiveRecord: 0.6ms | Allocations: 468)
+
+
+Started GET "/me" for ::1 at 2022-01-27 18:24:24 -0500
+Started GET "/invoices" for ::1 at 2022-01-27 18:24:24 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1303)
+
+
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1242)
+
+
+Started POST "/login" for ::1 at 2022-01-27 18:24:26 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"jason23", "password"=>"[FILTERED]", "session"=>{"username"=>"jason23", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jason23"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 401 Unauthorized in 9ms (Views: 0.3ms | ActiveRecord: 6.4ms | Allocations: 521)
+
+
+Started GET "/me" for ::1 at 2022-01-27 18:24:57 -0500
+Started GET "/invoices" for ::1 at 2022-01-27 18:24:57 -0500
+  [1m[35m (63.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 3949)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 14ms (Views: 0.1ms | ActiveRecord: 5.8ms | Allocations: 5902)
+
+
+Started POST "/login" for ::1 at 2022-01-27 18:24:59 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"jason23", "password"=>"[FILTERED]", "session"=>{"username"=>"jason23", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jason23"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 401 Unauthorized in 15ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 2479)
+
+
+Started POST "/signup" for ::1 at 2022-01-27 18:25:07 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"jason23", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"jason23"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jason23"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (8.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "jason23"], ["password_digest", "$2a$12$vz.w.0mn2iqtWnjeLuUM/.R1/g4bB.3WGM8eUX2D8ZVAVP7sBN2eC"], ["created_at", "2022-01-27 23:25:07.961481"], ["updated_at", "2022-01-27 23:25:07.961481"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 201 Created in 316ms (Views: 0.3ms | ActiveRecord: 19.5ms | Allocations: 5125)
+
+
+Started GET "/invoices" for ::1 at 2022-01-27 18:25:12 -0500
+Processing by InvoicesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.9ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 9.4ms | ActiveRecord: 5.1ms | Allocations: 8476)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:26:05 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:26:05 -0500
+Processing by InvoicesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (56.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.3ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 100ms (Views: 7.1ms | ActiveRecord: 56.7ms | Allocations: 1780)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 120ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 2865)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:26:16 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (7.0ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 39ms (Views: 1.5ms | ActiveRecord: 7.5ms | Allocations: 1186)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:26:17 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 3ms (ActiveRecord: 0.3ms | Allocations: 471)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:26:18 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 401 Unauthorized in 320ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 565)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:26:19 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 401 Unauthorized in 284ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 559)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-01-27 18:26:30 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"niraj2323"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (53.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 422 Unprocessable Entity in 1320ms (Views: 0.2ms | ActiveRecord: 53.7ms | Allocations: 1020809)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-01-27 18:26:37 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"jason2323", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"jason2323"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jason2323"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (6.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "jason2323"], ["password_digest", "$2a$12$UU8x3/dnv/4vfNbHjPUaJehKeKXqw8QGZviY5KCKrgr53IzNWQzCC"], ["created_at", "2022-01-27 23:26:37.565726"], ["updated_at", "2022-01-27 23:26:37.565726"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 201 Created in 263ms (Views: 0.1ms | ActiveRecord: 7.7ms | Allocations: 2667)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:26:37 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.3ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1068)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:26:45 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 468)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-01-27 18:26:58 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"newuser23", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"newuser23"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "newuser23"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (7.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "newuser23"], ["password_digest", "$2a$12$K1QVwkyIRB1pWevhRWrzo.6wxFfP5ixePdmaTb4L/kS6tL0H/wOce"], ["created_at", "2022-01-27 23:26:58.458042"], ["updated_at", "2022-01-27 23:26:58.458042"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 201 Created in 285ms (Views: 0.4ms | ActiveRecord: 16.0ms | Allocations: 2670)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:27:09 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 4ms (ActiveRecord: 0.7ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:27:21 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"newuser23", "password"=>"[FILTERED]", "session"=>{"username"=>"newuser23", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "newuser23"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 284ms (Views: 0.3ms | ActiveRecord: 3.2ms | Allocations: 617)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:27:24 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (16.7ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 39ms (Views: 13.6ms | ActiveRecord: 16.9ms | Allocations: 1067)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:27:28 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 4ms (ActiveRecord: 0.4ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:27:37 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 259ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 618)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:27:37 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (6.7ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 6.8ms | Allocations: 1067)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:27:49 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:27:49 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 618)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (27.5ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 4.5ms | ActiveRecord: 27.8ms | Allocations: 2858)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:27:52 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 7ms (ActiveRecord: 1.0ms | Allocations: 468)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:27:54 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:27:54 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 697)
+
+
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 12ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 2218)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:27:58 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 286ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 617)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:28:06 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:28:06 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.3ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1756)
+
+
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 22.5ms | Allocations: 2891)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:28:11 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.3ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 1.5ms | Allocations: 1071)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:28:12 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:28:22 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 282ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 617)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:28:23 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.2ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1067)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:28:30 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 3ms (ActiveRecord: 0.3ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:28:33 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 291ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 620)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:28:38 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 10ms (ActiveRecord: 7.5ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:28:47 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 266ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 617)
+
+
+Started POST "/invoices" for 127.0.0.1 at 2022-01-27 18:29:03 -0500
+Processing by InvoicesController#create as */*
+  Parameters: {"description"=>"Et earum ipsum voluptatem accusantium vero et illum qui.", "client_name"=>"Homenick", "client_email"=>"your.email+fakedata63272@gmail.com", "due_date"=>"2022-02-27", "status"=>"Draft", "invoice"=>{"description"=>"Et earum ipsum voluptatem accusantium vero et illum qui.", "client_name"=>"Homenick", "client_email"=>"your.email+fakedata63272@gmail.com", "status"=>"Draft", "due_date"=>"2022-02-27"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[31mUnpermitted parameter: :invoice[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mInvoice Create (15.9ms)[0m  [1m[32mINSERT INTO "invoices" ("user_id", "description", "client_name", "client_email", "status", "due_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 1], ["description", "Et earum ipsum voluptatem accusantium vero et illum qui."], ["client_name", "Homenick"], ["client_email", "your.email+fakedata63272@gmail.com"], ["status", "Draft"], ["due_date", "2022-02-27 00:00:00"], ["created_at", "2022-01-27 23:29:03.145806"], ["updated_at", "2022-01-27 23:29:03.145806"]]
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+Completed 201 Created in 106ms (Views: 0.5ms | ActiveRecord: 16.8ms | Allocations: 6444)
+
+
+Started GET "/invoices/8" for 127.0.0.1 at 2022-01-27 18:29:07 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.2ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1067)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:35:46 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:35:46 -0500
+Processing by InvoicesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 679ms (Views: 32.1ms | ActiveRecord: 131.4ms | Allocations: 6618)
+
+
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (31.5ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 873ms (Views: 26.7ms | ActiveRecord: 155.2ms | Allocations: 9395)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:35:50 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 10ms (ActiveRecord: 0.3ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:35:53 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 357ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 621)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:39:46 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:39:46 -0500
+Processing by InvoicesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (57.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (50.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 116ms (Views: 3.8ms | ActiveRecord: 50.0ms | Allocations: 962)
+
+
+  [1m[36mInvoice Load (28.9ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 164ms (Views: 13.1ms | ActiveRecord: 86.7ms | Allocations: 3016)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:39:58 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:39:58 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (46.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (66.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 77ms (Views: 0.5ms | ActiveRecord: 66.6ms | Allocations: 1137)
+
+
+  [1m[36mInvoice Load (54.5ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 125ms (Views: 14.2ms | ActiveRecord: 101.2ms | Allocations: 3004)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:40:03 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.8ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 57ms (Views: 1.3ms | ActiveRecord: 12.4ms | Allocations: 1070)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:40:19 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:40:19 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 40ms (Views: 3.0ms | ActiveRecord: 0.5ms | Allocations: 618)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (1.3ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 85ms (Views: 25.8ms | ActiveRecord: 2.6ms | Allocations: 2976)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:40:23 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:40:23 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (24.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 28ms (Views: 2.3ms | ActiveRecord: 24.4ms | Allocations: 1011)
+
+
+  [1m[36mUser Load (25.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (22.7ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 64ms (Views: 8.7ms | ActiveRecord: 48.0ms | Allocations: 2978)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:40:45 -0500
+Processing by UsersController#show as */*
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 54ms (Views: 1.8ms | ActiveRecord: 6.4ms | Allocations: 592)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:42:02 -0500
+Processing by UsersController#show as */*
+  [1m[36mUser Load (35.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 720ms (Views: 6.4ms | ActiveRecord: 35.1ms | Allocations: 593)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:42:23 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (35.0ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 69ms (Views: 1.9ms | ActiveRecord: 42.1ms | Allocations: 1067)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:43:19 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:43:19 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 33ms (Views: 1.7ms | ActiveRecord: 10.2ms | Allocations: 650)
+
+
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (9.6ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 10.2ms | ActiveRecord: 29.4ms | Allocations: 2976)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:44:34 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 27ms (ActiveRecord: 0.4ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 18:44:39 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 294ms (Views: 1.4ms | ActiveRecord: 2.6ms | Allocations: 617)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:44:43 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.3ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 46ms (Views: 1.6ms | ActiveRecord: 0.9ms | Allocations: 1070)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:47:36 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:47:36 -0500
+Processing by InvoicesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 119ms (Views: 7.4ms | ActiveRecord: 14.2ms | Allocations: 1103)
+
+
+  [1m[36mInvoice Load (11.6ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 166ms (Views: 34.7ms | ActiveRecord: 22.2ms | Allocations: 3010)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:48:26 -0500
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:48:26 -0500
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (23.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (29.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 159ms (Views: 9.2ms | ActiveRecord: 23.4ms | Allocations: 680)
+
+
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (68.5ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 345ms (Views: 89.5ms | ActiveRecord: 97.7ms | Allocations: 2980)
+
+
+Started GET "/18:1)%20Unclosed%20block" for 127.0.0.1 at 2022-01-27 18:49:41 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/18:1)%20Unclosed%20block"):
+  
+Started GET "/18:1)%20Unclosed%20block" for 127.0.0.1 at 2022-01-27 18:50:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/18:1)%20Unclosed%20block"):
+  
+Started GET "/invoices" for 127.0.0.1 at 2022-01-27 18:50:51 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-27 18:50:51 -0500
+Processing by InvoicesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (72.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 182ms (Views: 10.2ms | ActiveRecord: 72.6ms | Allocations: 1102)
+
+
+  [1m[36mInvoice Load (25.1ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 261ms (Views: 96.0ms | ActiveRecord: 25.6ms | Allocations: 3013)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:53:15 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (16.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (180.7ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 372ms (Views: 13.3ms | ActiveRecord: 197.4ms | Allocations: 1067)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:53:37 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (23.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.3ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 38ms (Views: 5.1ms | ActiveRecord: 23.6ms | Allocations: 1070)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 18:54:57 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.3ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 52ms (Views: 1.6ms | ActiveRecord: 18.1ms | Allocations: 1068)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-27 18:55:05 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 11ms (ActiveRecord: 0.3ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-27 19:05:47 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (176.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 2904ms (Views: 13.0ms | ActiveRecord: 176.6ms | Allocations: 626)
+
+
+Started GET "/invoices/3" for 127.0.0.1 at 2022-01-27 19:06:04 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (7.2ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 69ms (Views: 4.8ms | ActiveRecord: 22.7ms | Allocations: 1068)
+
+
+  [1m[35m (28.5ms)[0m  [1m[35mCREATE DATABASE "phase5_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "phase5_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2621538369271647105)[0m
+  [1m[35m (8.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2621538369271647105)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (273.5ms)[0m  [1m[35mCREATE DATABASE "phase_development" ENCODING = 'unicode'[0m
+  [1m[35m (96.5ms)[0m  [1m[35mCREATE DATABASE "phase_test" ENCODING = 'unicode'[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4293517790742443025)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210603193658)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210603193658"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateInvoices (20210603193805)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "invoices" ("id" bigserial primary key, "user_id" bigint NOT NULL, "description" character varying, "client_name" character varying, "client_email" character varying, "status" character varying, "due_date" timestamp, "logo" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_3d1522a0d8"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_invoices_on_user_id" ON "invoices" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210603193805"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTransactions (20220120014426)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "user_id" bigint NOT NULL, "item" character varying, "price" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_77364e6416"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220120014426"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-28 13:11:52.546176"], ["updated_at", "2022-01-28 13:11:52.546176"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4293517790742443025)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/invoices" for 127.0.0.1 at 2022-01-28 08:16:29 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-28 08:16:29 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by InvoicesController#index as */*
+  [1m[36mUser Load (52.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 127ms (Views: 0.5ms | ActiveRecord: 62.1ms | Allocations: 7177)
+
+
+  [1m[36mUser Load (76.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 99ms (Views: 0.1ms | ActiveRecord: 76.6ms | Allocations: 5531)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-28 08:16:30 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 401 Unauthorized in 5ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 2475)
+
+
+Started POST "/signup" for 127.0.0.1 at 2022-01-28 08:16:41 -0500
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"username"=>"niraj2323"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mUser Create (62.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "niraj2323"], ["password_digest", "$2a$12$99IDbTR9iMiwZ8hcrN0oVuHSlhxSyl9vftrPJJmlhtcr62tUZmIpW"], ["created_at", "2022-01-28 13:16:41.898757"], ["updated_at", "2022-01-28 13:16:41.898757"]]
+  ↳ app/controllers/users_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:5:in `create'
+Completed 201 Created in 382ms (Views: 0.3ms | ActiveRecord: 84.5ms | Allocations: 5125)
+
+
+Started GET "/invoices" for 127.0.0.1 at 2022-01-28 08:16:49 -0500
+Started GET "/me" for 127.0.0.1 at 2022-01-28 08:16:49 -0500
+Processing by InvoicesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1071)
+
+
+  [1m[36mInvoice Load (23.0ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices"[0m
+  ↳ app/controllers/invoices_controller.rb:4:in `index'
+Completed 200 OK in 89ms (Views: 0.8ms | ActiveRecord: 23.3ms | Allocations: 4855)
+
+
+Started POST "/invoices" for 127.0.0.1 at 2022-01-28 08:18:01 -0500
+Processing by InvoicesController#create as */*
+  Parameters: {"description"=>"Voluptate deserunt et reprehenderit sit eos doloribus sint amet.", "client_name"=>"Torphy", "client_email"=>"your.email+fakedata82433@gmail.com", "due_date"=>"2021-09-03", "status"=>"Draft", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU", "invoice"=>{"description"=>"Voluptate deserunt et reprehenderit sit eos doloribus sint amet.", "client_name"=>"Torphy", "client_email"=>"your.email+fakedata82433@gmail.com", "status"=>"Draft", "due_date"=>"2021-09-03", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[31mUnpermitted parameter: :invoice[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mInvoice Create (43.7ms)[0m  [1m[32mINSERT INTO "invoices" ("user_id", "description", "client_name", "client_email", "status", "due_date", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 1], ["description", "Voluptate deserunt et reprehenderit sit eos doloribus sint amet."], ["client_name", "Torphy"], ["client_email", "your.email+fakedata82433@gmail.com"], ["status", "Draft"], ["due_date", "2021-09-03 00:00:00"], ["logo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"], ["created_at", "2022-01-28 13:18:01.224484"], ["updated_at", "2022-01-28 13:18:01.224484"]]
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+Completed 201 Created in 99ms (Views: 0.7ms | ActiveRecord: 74.0ms | Allocations: 10289)
+
+
+Started GET "/invoices/1" for 127.0.0.1 at 2022-01-28 08:18:05 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.2ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1216)
+
+
+Started POST "/invoices" for 127.0.0.1 at 2022-01-28 08:18:38 -0500
+Processing by InvoicesController#create as */*
+  Parameters: {"description"=>"Molestiae nihil aliquid cum et ea dolor voluptas vitae non.", "client_name"=>"Daugherty", "client_email"=>"your.email+fakedata41986@gmail.com", "due_date"=>"2021-01-29", "status"=>"null", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU", "invoice"=>{"description"=>"Molestiae nihil aliquid cum et ea dolor voluptas vitae non.", "client_name"=>"Daugherty", "client_email"=>"your.email+fakedata41986@gmail.com", "status"=>"null", "due_date"=>"2021-01-29", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[31mUnpermitted parameter: :invoice[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mInvoice Create (0.7ms)[0m  [1m[32mINSERT INTO "invoices" ("user_id", "description", "client_name", "client_email", "status", "due_date", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 1], ["description", "Molestiae nihil aliquid cum et ea dolor voluptas vitae non."], ["client_name", "Daugherty"], ["client_email", "your.email+fakedata41986@gmail.com"], ["status", "null"], ["due_date", "2021-01-29 00:00:00"], ["logo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"], ["created_at", "2022-01-28 13:18:38.674726"], ["updated_at", "2022-01-28 13:18:38.674726"]]
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (5.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+Completed 201 Created in 24ms (Views: 0.9ms | ActiveRecord: 9.8ms | Allocations: 2778)
+
+
+Started POST "/invoices" for 127.0.0.1 at 2022-01-28 08:18:47 -0500
+Processing by InvoicesController#create as */*
+  Parameters: {"description"=>"Officia deleniti ut sed sint numquam odit reiciendis et quia.", "client_name"=>"Bradtke", "client_email"=>"your.email+fakedata20446@gmail.com", "due_date"=>"2022-02-04", "status"=>"Paid", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU", "invoice"=>{"description"=>"Officia deleniti ut sed sint numquam odit reiciendis et quia.", "client_name"=>"Bradtke", "client_email"=>"your.email+fakedata20446@gmail.com", "status"=>"Paid", "due_date"=>"2022-02-04", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[31mUnpermitted parameter: :invoice[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mInvoice Create (0.8ms)[0m  [1m[32mINSERT INTO "invoices" ("user_id", "description", "client_name", "client_email", "status", "due_date", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 1], ["description", "Officia deleniti ut sed sint numquam odit reiciendis et quia."], ["client_name", "Bradtke"], ["client_email", "your.email+fakedata20446@gmail.com"], ["status", "Paid"], ["due_date", "2022-02-04 00:00:00"], ["logo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"], ["created_at", "2022-01-28 13:18:47.449828"], ["updated_at", "2022-01-28 13:18:47.449828"]]
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+Completed 201 Created in 20ms (Views: 1.8ms | ActiveRecord: 6.3ms | Allocations: 2777)
+
+
+Started POST "/invoices" for 127.0.0.1 at 2022-01-28 08:19:00 -0500
+Processing by InvoicesController#create as */*
+  Parameters: {"description"=>"Nostrum fugiat aut vel velit culpa sit enim quasi.", "client_name"=>"Durgan", "client_email"=>"your.email+fakedata91084@gmail.com", "due_date"=>"2021-03-18", "status"=>"Unpaid", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU", "invoice"=>{"description"=>"Nostrum fugiat aut vel velit culpa sit enim quasi.", "client_name"=>"Durgan", "client_email"=>"your.email+fakedata91084@gmail.com", "status"=>"Unpaid", "due_date"=>"2021-03-18", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"}}
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[31mUnpermitted parameter: :invoice[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mInvoice Create (7.1ms)[0m  [1m[32mINSERT INTO "invoices" ("user_id", "description", "client_name", "client_email", "status", "due_date", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 1], ["description", "Nostrum fugiat aut vel velit culpa sit enim quasi."], ["client_name", "Durgan"], ["client_email", "your.email+fakedata91084@gmail.com"], ["status", "Unpaid"], ["due_date", "2021-03-18 00:00:00"], ["logo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"], ["created_at", "2022-01-28 13:19:00.277798"], ["updated_at", "2022-01-28 13:19:00.277798"]]
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (22.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+Completed 201 Created in 70ms (Views: 2.3ms | ActiveRecord: 39.8ms | Allocations: 2777)
+
+
+Started POST "/invoices" for 127.0.0.1 at 2022-01-28 08:19:09 -0500
+Processing by InvoicesController#create as */*
+  Parameters: {"description"=>"Consequatur deserunt sunt est eius.", "client_name"=>"Zulauf", "client_email"=>"your.email+fakedata18560@gmail.com", "due_date"=>"2021-02-25", "status"=>"Draft", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU", "invoice"=>{"description"=>"Consequatur deserunt sunt est eius.", "client_name"=>"Zulauf", "client_email"=>"your.email+fakedata18560@gmail.com", "status"=>"Draft", "due_date"=>"2021-02-25", "logo"=>"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+[31mUnpermitted parameter: :invoice[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mInvoice Create (19.0ms)[0m  [1m[32mINSERT INTO "invoices" ("user_id", "description", "client_name", "client_email", "status", "due_date", "logo", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["user_id", 1], ["description", "Consequatur deserunt sunt est eius."], ["client_name", "Zulauf"], ["client_email", "your.email+fakedata18560@gmail.com"], ["status", "Draft"], ["due_date", "2021-02-25 00:00:00"], ["logo", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vvnqCXSW-Laec3rrdNrQQiXtbjmR8AFgjA&usqp=CAU"], ["created_at", "2022-01-28 13:19:09.183997"], ["updated_at", "2022-01-28 13:19:09.183997"]]
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (11.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/invoices_controller.rb:13:in `create'
+Completed 201 Created in 45ms (Views: 0.4ms | ActiveRecord: 30.8ms | Allocations: 2773)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-28 08:19:14 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 4ms (ActiveRecord: 0.2ms | Allocations: 471)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-28 08:19:16 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 291ms (Views: 0.3ms | ActiveRecord: 5.5ms | Allocations: 619)
+
+
+Started GET "/invoices/1" for 127.0.0.1 at 2022-01-28 08:19:22 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (0.4ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 1087)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-01-28 08:19:29 -0500
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+Completed 204 No Content in 8ms (ActiveRecord: 0.2ms | Allocations: 468)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-01-28 08:45:30 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"niraj2323", "password"=>"[FILTERED]", "session"=>{"username"=>"niraj2323", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "niraj2323"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+Completed 200 OK in 437ms (Views: 10.3ms | ActiveRecord: 69.9ms | Allocations: 3760)
+
+
+Started GET "/invoices/1" for 127.0.0.1 at 2022-01-28 08:45:34 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (7.2ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 19ms (Views: 1.1ms | ActiveRecord: 7.4ms | Allocations: 1112)
+
+
+Started GET "/invoices/1" for 127.0.0.1 at 2022-01-28 08:46:00 -0500
+Processing by InvoicesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:11:in `authorize'
+  [1m[36mInvoice Load (4.9ms)[0m  [1m[34mSELECT "invoices".* FROM "invoices" WHERE "invoices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/invoices_controller.rb:8:in `show'
+Completed 200 OK in 23ms (Views: 2.3ms | ActiveRecord: 6.1ms | Allocations: 1086)
+
+

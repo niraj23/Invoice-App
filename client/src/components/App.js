@@ -55,7 +55,8 @@ function App() {
           <Route path="/new">
             <NewInvoice onAddInvoice={handleAddInvoice} />
           </Route>
-          <Route path="/invoices">
+
+          <Route exact path={["/", "/invoices"]}>
             <InvoiceContainer
               invoices={invoices}
               onUpdateInvoice={handleUpdateInvoice}

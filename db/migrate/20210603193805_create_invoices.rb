@@ -7,6 +7,7 @@ class CreateInvoices < ActiveRecord::Migration[6.1]
       t.string :client_email
       t.string :status
       t.datetime :due_date
+      t.string :logo
       t.timestamps
     end
   end

@@ -5,7 +5,7 @@ import { PDFExport } from "@progress/kendo-react-pdf";
 import { useRef } from "react";
 import { Button } from "../styles";
 import styled from "styled-components";
-import logo from "../Images/logo.png";
+// import logo from "../Images/logo.png";
 
 const InvoicePage = ({ onDeleteInvoice }) => {
   const [invoice, setInvoice] = useState([]);
@@ -57,7 +57,7 @@ const InvoicePage = ({ onDeleteInvoice }) => {
                       <img
                         className="img-title"
                         alt="Company Logo"
-                        src={logo}
+                        src={invoice.logo}
                       />
                     </td>
                     <td>

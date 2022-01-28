@@ -9,6 +9,7 @@ function NewInvoice({ onAddInvoice }) {
   const [status, setStatus] = useState("");
   const [clientName, setClientName] = useState("");
   const [clientEmail, setClientEmail] = useState("");
+  const [logo, setLogo] = useState("");
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -27,6 +28,7 @@ function NewInvoice({ onAddInvoice }) {
         client_email: clientEmail,
         due_date: dueDate,
         status,
+        logo,
       }),
     }).then((r) => {
       setIsLoading(false);
@@ -89,6 +91,15 @@ function NewInvoice({ onAddInvoice }) {
               id="status"
               value={status}
               onChange={(e) => setStatus(e.target.value)}
+            />
+          </FormField>
+          <FormField>
+            <Label htmlFor="status">Company Logo</Label>
+            <Input
+              type="url"
+              id="logo"
+              value={logo}
+              onChange={(e) => setLogo(e.target.value)}
             />
           </FormField>
           <FormField>

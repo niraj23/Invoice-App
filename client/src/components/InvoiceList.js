@@ -53,9 +53,9 @@ function InvoiceList({ invoice, onUpdateInvoice }) {
               <Spans>Due Date:</Spans> {due_date}
             </List>
           </UL>
-          <Button as={Link} to={`/transactions`}>
+          {/* <Button as={Link} to={`/transactions`}>
             Add Transactions
-          </Button>
+          </Button> */}
         </>
       )}
     </Wrapper>
