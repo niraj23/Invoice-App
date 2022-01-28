@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: phase_development
+  database: phas_development
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,7 +48,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: phase_test
+  database: phas_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -72,6 +72,6 @@ test:
 #
 production:
   <<: *default
-  database: phase_production
-  username: phase
-  password: <%= ENV['PHASE_DATABASE_PASSWORD'] %>
+  database: phas_production
+  username: phas
+  password: <%= ENV['PHAS_DATABASE_PASSWORD'] %>

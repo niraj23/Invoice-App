@@ -8,4 +8,6 @@ class Invoice < ApplicationRecord
   validates :due_date, presence: true
   validates :logo, presence: true
   validates :status, presence: true
+  validates :item, presence: true
+  validates :price, presence: true
 end

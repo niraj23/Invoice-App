@@ -8,6 +8,8 @@ class CreateInvoices < ActiveRecord::Migration[6.1]
       t.string :status
       t.datetime :due_date
       t.string :logo
+      t.string :item
+      t.integer :price
       t.timestamps
     end
   end
